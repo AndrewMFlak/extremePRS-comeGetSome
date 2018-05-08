@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/prsBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: crimson;
+}
+h1 {
+    text-align: center;
+}
+#game {
+    text-align: center;
+    font-size: 18px;
+}
+arena {
+    height: 19%;
+}
+.userSelectionContainer {
+    float: left;
+    background-color: silver;
+    border: 3px solid gray;
+    width: 15%;
+    height: 15%;
+}
+.computerSelectionContainer {
+    float: right;
+    background-color: silver;
+    border: 3px solid gray;
+    width: 15%;
+    height: 15%;
+}
