@@ -1,11 +1,28 @@
+* {
+    font-family: 'Shadows Into Light', cursive;
+}
+
 body {
     background-image: url(../images/prsBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: crimson;
 }
+#myCanvas
+{
+  height:200px;
+  width:1600px;
+  max-width:99%;
+  min-width:800px;
+  position:absolute;
+  bottom:0;
+  overflow: hidden;
+  
+}
 h1 {
     text-align: center;
+    font-size: 32px;
+    font-weight: bold;
 }
 #game {
     text-align: center;
