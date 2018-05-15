@@ -10,8 +10,8 @@ body {
 }
 #myCanvas
 {
-  height:200px;
-  width:1600px;
+  height:300px;
+  width:2000px;
   max-width:99%;
   min-width:800px;
   position:absolute;
