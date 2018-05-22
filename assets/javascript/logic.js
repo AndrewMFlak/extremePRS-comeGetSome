@@ -50,261 +50,241 @@ $(".play").click(function () {
     $(".button").append('<button data-role="button" class="paperButton" data-inline="true" data-mini="true" data-theme="b">Paper</button>');
     $(".button").append('<button data-role="button" class="scissorsButton" data-inline="true" data-mini="true" data-theme="b">Scissors</button>');
     $(".play").hide();
-    alert("Please select your weapon of choice!!!!");
-    $(".paperButton").click(function () {
-        alert("The user has selected paper");
-        var computerChoice = Math.random() * 1;
-        console.log(computerChoice);
-        var userSelection = "paper";
-        $(".userSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
-        (function computerSelect() {
-            if (computerChoice < .34) {
-                var compSelection = "paper";
-                $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
-                alert("computer selected paper");
-                function play() {
 
-                    if (compSelection == userSelection) {
-                        draw();
-                    }
-                    else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                        win();
-                    } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                        loss();
-                    } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                        loss();
-                    } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                        win();
-                    } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                        win();
-                    } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                        loss();
-                    }
-                }
-            }
-
-            else if (computerChoice <= .67) {
-                console.log("computerRock");
-                var compSelection = "rock";
-                $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
-                alert("computer selected rock");
-                function play() {
-
-                    if (compSelection == userSelection) {
-                        draw();
-                    }
-                    else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                        win();
-                    } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                        loss();
-                    } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                        loss();
-                    } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                        win();
-                    } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                        win();
-                    } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                        loss();
-                    }
-                }
-            }
-            else {
-                console.log("computerScissors");
-                var compSelection = "scissors";
-                $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
-                alert("computer selected scissors");
-
-                if (compSelection == userSelection) {
-                    draw();
-                }
-                else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                    win();
-                } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                    loss();
-                } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                    loss();
-                } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                    loss();
-                }
-
-            }
-        }());
-    });
-});
-$(".rockButton").click(function () {
-    alert("The user has selected rock");
-    var userSelection = "rock";
-    var computerChoice = Math.random() * 1;
-    console.log(computerChoice);
-    $(".userSelection").append('<img id="rock"  height="80%" width="80%" src="assets/images/rock.jpg"/>');
-    (function computerSelect() {
-        if (computerChoice < .34) {
-
-            var compSelection = "paper";
-            $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
-            alert("computer selected paper");
-            function play() {
-
-                if (compSelection == userSelection) {
-                    draw();
-                }
-                else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                    win();
-                } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                    loss();
-                } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                    loss();
-                } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                    loss();
-                }
-            }
-        }
-
-        else if (computerChoice <= .67) {
-            console.log("computerRock");
-            var compSelection = "rock";
-            $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
-            alert("computer selected rock");
-            function play() {
-
-                if (compSelection == userSelection) {
-                    draw();
-                }
-                else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                    win();
-                } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                    loss();
-                } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                    loss();
-                } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                    loss();
-                }
-            }
-        }
-        else {
-            console.log("computerScissors");
-            var compSelection = "scissors";
-            $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
-            alert("computer selected scissors");
-
-            if (compSelection == userSelection) {
-                draw();
-            }
-            else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                win();
-            } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                loss();
-            } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                loss();
-            } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                win();
-            } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                win();
-            } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                loss();
-            }
-
-        }
-    }());
-});
-$(".scissorsButton").click(function () {
-    alert("The user has selected scissors");
-    var userSelection = "scissors";
-    var computerChoice = Math.random() * 1;
-    $(".userSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
-    (function computerSelect() {
-        if (computerChoice < .34) {
+    (function gameTime() {
+        alert("Please select your weapon of choice!!!!");
+        $(".paperButton").click(function () {
+            alert("The user has selected paper");
+            var computerChoice = Math.random() * 1;
             console.log(computerChoice);
-            console.log("computerPaper");
-            var compSelection = "paper";
-            $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
-            alert("computer selected paper");
-            function play() {
-
-                if (compSelection == userSelection) {
-                    draw();
+            var userSelection = "paper";
+            $(".userSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
+            (function computerSelect() {
+                if (computerChoice < .34) {
+                    var compSelection = "paper";
+                    var userSelection = "paper";
+                    $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
+                    alert("computer selected paper");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
                 }
-                else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                    win();
-                } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                    loss();
-                } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                    loss();
-                } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                    loss();
+                else if (computerChoice <= .67) {
+                    var compSelection = "rock";
+                    var userSelection = "paper";
+                    $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
+                    alert("computer selected rock");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
                 }
-            }
-        }
+                else {
+                    var compSelection = "scissors";
+                    var userSelection = "paper";
+                    $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
+                    alert("computer selected scissors");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
+                };
 
-        else if (computerChoice <= .67) {
-            console.log("computerRock");
-            var compSelection = "rock";
-            $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
-            alert("computer selected rock");
-            function play() {
+            }());
 
-                if (compSelection == userSelection) {
-                    draw();
+        });
+        $(".rockButton").click(function () {
+            alert("The user has selected rock");
+            var computerChoice = Math.random() * 1;
+            console.log(computerChoice);
+            $(".userSelection").append('<img id="rock"  height="80%" width="80%" src="assets/images/rock.jpg"/>');
+            (function computerSelect() {
+                if (computerChoice < .34) {
+                    var compSelection = "paper";
+                    var userSelection = "rock";
+                    $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
+                    alert("computer selected paper");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
                 }
-                else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                    win();
-                } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                    loss();
-                } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                    loss();
-                } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                    win();
-                } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                    loss();
+
+                else if (computerChoice <= .67) {
+                    var compSelection = "rock";
+                    var userSelection = "rock";
+                    $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
+                    alert("computer selected rock");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
                 }
-            }
-        }
-        else {
-            console.log("computerScissors");
-            var compSelection = "scissors";
-            $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
-            alert("computer selected scissors");
 
-            if (compSelection == userSelection) {
-                draw();
-            }
-            else if ((compSelection == "Rock") && (userSelection == "Paper")) {
-                win();
-            } else if ((compSelection == "Rock") && (userSelection == "Scissors")) {
-                loss();
-            } else if ((compSelection == "Paper") && (userSelection == "Rock")) {
-                loss();
-            } else if ((compSelction == "Paper") && (userSelction == "Scissors")) {
-                win();
-            } else if ((compSelection == "Scissors") && (userSelection == "Rock")) {
-                win();
-            } else if ((compSelection == "Scissors") && (userSelection == "Paper")) {
-                loss();
-            }
+                else {
+                    var compSelection = "scissors";
+                    var userSelection = "rock";
+                    $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
+                    alert("computer selected scissors");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
+                };
 
-        }
-
+            }());
+        });
+        $(".scissorsButton").click(function () {
+            alert("The user has selected scissors");
+            var computerChoice = Math.random() * 1;
+            $(".userSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
+            (function computerSelect() {
+                if (computerChoice < .34) {
+                    console.log(computerChoice);
+                    var compSelection = "paper";
+                    var userSelection = "scissors";
+                    console.log(compSelection);
+                    $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
+                    alert("computer selected paper");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
+                }
+                else if (computerChoice <= .67) {
+                    var compSelection = "rock";
+                    var userSelection = "scissors";
+                    console.log(compSelection);
+                    $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
+                    alert("computer selected rock");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
+                }
+                else {
+                    var compSelection = "scissors";
+                    var userSelection = "scissors";
+                    $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
+                    alert("computer selected scissors");
+                    if (compSelection == userSelection) {
+                        draw();
+                    }
+                    else if ((compSelection == "rock") && (userSelection == "paper")) {
+                        win();
+                    } else if ((compSelection == "rock") && (userSelection == "scissors")) {
+                        loss();
+                    } else if ((compSelection == "paper") && (userSelection == "rock")) {
+                        loss();
+                    } else if ((compSelction == "paper") && (userSelction == "scissors")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "rock")) {
+                        win();
+                    } else if ((compSelection == "scissors") && (userSelection == "paper")) {
+                        loss();
+                    };
+                };
+            }());
+        });
     }());
 });
-
 // // fog effect 
 console.clear();
 
