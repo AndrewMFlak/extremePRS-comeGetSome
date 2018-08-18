@@ -6,7 +6,7 @@ var userRock = true;
 var userScissors = true;
 var wins = 0;
 var losses = 0;
-var draws = 0;
+var ties = 0;
 
 
 function win() {
@@ -25,11 +25,11 @@ function loss() {
     playAgain();
 };
 
-function draws() {
+function tie() {
     alert("you have drawn with your opponent!!!");
-    draws++;
-    var drawText = "Draw: " + draws;
-    $(".draws").text(drawText);
+    ties++;
+    var tieText = "Draw: " + ties;
+    $(".ties").text(tieText);
     playAgain();
 };
 
@@ -63,60 +63,63 @@ $(".play").click(function () {
         $(".paperButton").click(function () {
             alert("The user has selected paper");
             var computerChoice = Math.random() * 1;
-            console.log(computerChoice);
-            var userSelection = "paper";
+            // var userSelection = "paper";
             $(".userSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
             (function computerSelect() {
                 if (computerChoice < .34) {
-                    var compSelection = "paper";
-                    var userSelection = "paper";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "paper";
+                    // var userSelection = "paper";
                     $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
                     alert("computer selected paper");
-                    draws();
+                    tie();
                 }
                 else if (computerChoice <= .67) {
-                    var compSelection = "rock";
-                    var userSelection = "paper";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "rock";
+                    // var userSelection = "paper";
                     $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
                     alert("computer selected rock");
                     win();
                 }
                 else {
-                    var compSelection = "scissors";
-                    var userSelection = "paper";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "scissors";
+                    // var userSelection = "paper";
                     $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
                     alert("computer selected scissors");
                     loss();
-                };
-
+                }
             }());
 
         });
         $(".rockButton").click(function () {
             alert("The user has selected rock");
             var computerChoice = Math.random() * 1;
-            console.log(computerChoice);
             $(".userSelection").append('<img id="rock"  height="80%" width="80%" src="assets/images/rock.jpg"/>');
             (function computerSelect() {
                 if (computerChoice < .34) {
-                    var compSelection = "paper";
-                    var userSelection = "rock";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "paper";
+                    // var userSelection = "rock";
                     $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
                     alert("computer selected paper");
                     loss();
                 }
 
                 else if (computerChoice <= .67) {
-                    var compSelection = "rock";
-                    var userSelection = "rock";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "rock";
+                    // var userSelection = "rock";
                     $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
                     alert("computer selected rock");
-                    draws();
+                    tie();
                 }
 
                 else {
-                    var compSelection = "scissors";
-                    var userSelection = "rock";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "scissors";
+                    // var userSelection = "rock";
                     $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
                     alert("computer selected scissors");
                     win();
@@ -130,28 +133,28 @@ $(".play").click(function () {
             $(".userSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
             (function computerSelect() {
                 if (computerChoice < .34) {
-                    console.log(computerChoice);
-                    var compSelection = "paper";
-                    var userSelection = "scissors";
-                    console.log(compSelection);
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "paper";
+                    // var userSelection = "scissors";
                     $(".computerSelection").append('<img id="paper" height="80%" width="80%" src="assets/images/paper.jpeg"/>');
                     alert("computer selected paper");
                     win();
                 }
                 else if (computerChoice <= .67) {
-                    var compSelection = "rock";
-                    var userSelection = "scissors";
-                    console.log(compSelection);
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "rock";
+                    // var userSelection = "scissors";
                     $(".computerSelection").append('<img id="rock" height="80%" width="80%" src="assets/images/rock.jpg"/>');
                     alert("computer selected rock");
                     loss();
                 }
                 else {
-                    var compSelection = "scissors";
-                    var userSelection = "scissors";
+                    console.log("computer choice" + computerChoice);
+                    // var compSelection = "scissors";
+                    // var userSelection = "scissors";
                     $(".computerSelection").append('<img id="scissors" height="80%" width="80%" src="assets/images/scissors.png"/>');
                     alert("computer selected scissors");
-                    draws();
+                    tie();
                 };
             }());
         });

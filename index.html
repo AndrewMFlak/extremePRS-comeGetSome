@@ -5,26 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-    <!-- just for fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Exo+2:400,800' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Paper...Rock...Scissors!</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <h1>
-            Rock, Paper, Scissors
-        </h1>
-    </header>
+<body id="element-with-background-image">
+    <nav>
+        <div class="header">
+            <h1>
+                Rock, Paper, Scissors
+            </h1>
+        </div>
+
+    </nav>
+
     <div id="game">
         <div class="scoreBoard">
             <div class="wins">Wins: 0</div>
             <div class="losses">Losses: 0</div>
-            <div class="draws">Draw: 0</div>
+            <div class="ties">Draw: 0</div>
         </div>
+
         <div class="button">
             <button class="play">
                 Play extreme Rock Paper Scissors
@@ -33,27 +35,26 @@
                 Would you like to play again?
             </button>
         </div>
-
     </div>
+
     <div class="arena">
         <div class="userSelectionContainer">
             <div class="userSelection">
-
             </div>
         </div>
+
         <div class="computerSelectionContainer">
             <div class="computerSelection">
-
             </div>
         </div>
-
     </div>
     <canvas id="myCanvas" height="300px" width="2000px"></canvas>
+
+    <!-- JS file for application effects -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    <script src="assets/javascript/logic.js">
+    <script type="text/javascript" src="assets/javascript/logic.js">
     </script>
-
 </body>
 
 </html>
