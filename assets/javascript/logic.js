@@ -47,6 +47,8 @@ $(".resetMe").click(function () {
     $(".rockButton").show();
     $(".paperButton").show();
     $(".scissorsButton").show();
+    $( ".userSelectionContainer" ).append( '<div class="userSelection"></div>');
+    $( ".computerSelectionContainer" ).append( '<div class="computerSelection"></div>');
 });
 
 

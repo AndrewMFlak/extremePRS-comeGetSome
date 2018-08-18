@@ -75,3 +75,9 @@ body {
     height: auto;
     min-height: 300px;
 }
+.userSelection {
+    margin: auto;
+}
+.computerSelection {
+   margin: auto; 
+}
